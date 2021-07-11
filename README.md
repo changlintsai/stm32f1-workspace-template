@@ -7,10 +7,10 @@ Documents that are usefull in setting up this environment: [Using the GNU Compil
 ---
 
 
-> ### The Build Process overview:  
-> The compiling process of a computer is not an easy task, the source code goes through multiple stages before it is readable to the computer.  
-> In general, the compiler has three stages, which includes the *preprocessing stage*, the *code generation stage*, and the *assembler stage*, after these three stages, the .c file was converted in to the .i, .s, and finally .o file. The .o file is called the **relocatable object file**, which is essentially the opcodes of that the computer is able to interprete, however, the object files has not been specified its memory location, which means that it does not know where in the flash memory of stm32 should the instructions be placed. To assign the instructions to our desired location, which is often dependent on which microcontroller we're using, the .o files has to go through a *linking stage* to produce an **executable and linkable file**, or .elf file. Finally, using the *objcopy tool*, the .elf files can be converted into .bin or .ihex format, which can be used flashed into the microcontroller.  
-> All these complicated steps can be achieved by using the arm cross compiler, in this case, arm-none-eabi-gcc.
+### The Build Process overview:  
+The compiling process of a computer is not an easy task, the source code goes through multiple stages before it is readable to the computer.  
+In general, the compiler has three stages, which includes the *preprocessing stage*, the *code generation stage*, and the *assembler stage*, after these three stages, the .c file was converted in to the .i, .s, and finally .o file. The .o file is called the **relocatable object file**, which is essentially the opcodes of that the computer is able to interprete, however, the object files has not been specified its memory location, which means that it does not know where in the flash memory of stm32 should the instructions be placed. To assign the instructions to our desired location, which is often dependent on which microcontroller we're using, the .o files has to go through a *linking stage* to produce an **executable and linkable file**, or .elf file. Finally, using the *objcopy tool*, the .elf files can be converted into .bin or .ihex format, which can be used flashed into the microcontroller.  
+All these complicated steps can be achieved by using the arm cross compiler, in this case, arm-none-eabi-gcc.
 
 Now lets look into the important files in the miniblink repository.  
 
